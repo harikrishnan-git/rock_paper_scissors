@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock paper scissor</title>
+    <script type="text/javascript">
+      let s;
+      let win;
+
+      for (s = 0; s < 5; s++) {
+        let comp = Math.floor(Math.random() * 3) + 1;
+        let input = parseInt(
+          prompt("Enter your choice\n1.rock\n2.paper\n3.scissor")
+        );
+        console.log(input);
+        console.log(comp);
+        if (comp === 1) {
+          console.log("Computer entered rock\n");
+          if (input === 2) {
+            console.log("You winn!!!\n");
+            win++;
+          } else if (input === 3) {
+            console.log("You lost\n");
+          } else {
+            console.log("Draw!!\n");
+            win = win + 0.5;
+          }
+        }
+        if (comp === 2) {
+          console.log("Computer entered paper\n");
+          if (input === 3) {
+            console.log("You winn!!!\n");
+            win++;
+          } else if (input === 1) {
+            console.log("You lost\n");
+          } else {
+            console.log("Draw!!\n");
+            win = win + 0.5;
+          }
+        }
+        if (comp === 3) {
+          console.log("Computer entered scissor\n");
+          if (input === 1) {
+            console.log("You winn!!!\n");
+            win++;
+          } else if (input === 2) {
+            console.log("You lost\n");
+          } else {
+            console.log("Draw!!\n");
+            win = win + 0.5;
+          }
+        }
+      }
+      if (win > 2.5) {
+        console.log("You won the game");
+      } else if (win < 2.5) {
+        console.log("You lost the game");
+      } else {
+        console.log("The game is tied");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
